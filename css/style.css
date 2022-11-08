@@ -1,9 +1,9 @@
 :root {/*-- sets color variables --*/
-  --dark: #444;
+  --dark: rgb(53, 61, 83);
   --ltmid: #DDD;
-  --dkmid: #999;
+  --dkmid: rgb(71, 82, 112);
   --light: #F9F9F9;
-  --accent: #6495ed;
+  --accent: rgb(70, 108, 214);
 }
 body {
   color: var(--dark); /*-- sets body default font color --*/
@@ -44,7 +44,7 @@ a.nav-link.logo {  /*-- just the site title --*/
   font-weight: 900; /*-- set to heaviest font --*/
 }
 a#trigram { /*-- hamburger menu icon --*/
-  display: none;  /*-- default display is none --*/
+  display: inherit;  /*-- default display is none --*/
 }
 a#trigram::before { /*-- uses ::before to change the menu icon --*/
   content: '\2630'; /*-- sets it to show the hamburger icon --*/
@@ -53,6 +53,20 @@ a#trigram::before { /*-- uses ::before to change the menu icon --*/
   top: -.5rem; /*-- a little space from the top --*/
   right: 0; /*-- flush right --*/
 }
+@media screen and (max-width: 990px) {
+  .nav-wrap {
+    display: none;
+
+  }
+  .site-nav.mobile {
+    display:flex; 
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+  
 main {
   padding: 1rem 2rem; /*-- adds inside space around the main content area --*/
 }
