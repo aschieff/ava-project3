@@ -58,7 +58,7 @@ a#trigram::before { /*-- uses ::before to change the menu icon --*/
     display: none;
 
   }
-  .site-nav.mobile {
+  .nav-wrap.mobile {
     display:flex; 
     flex-direction: column;
     position: absolute;
