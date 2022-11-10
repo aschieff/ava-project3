@@ -1,5 +1,5 @@
 // toggles the navigation menu
-function navToggle() {}
+function navToggle() {
 let siteNav = document.getElementById('site-nav');
 let trigram = document.getElementById('trigram');
 if (siteNav.className === 'nav-wrap') {
@@ -8,6 +8,7 @@ if (siteNav.className === 'nav-wrap') {
 } else {
   siteNav.classList = 'nav-wrap';
   trigram.classList = 'nav-link';
+}
 }
 // Put slideshow fucntions here
 
