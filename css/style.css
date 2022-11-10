@@ -44,7 +44,7 @@ a.nav-link.logo {  /*-- just the site title --*/
   font-weight: 900; /*-- set to heaviest font --*/
 }
 a#trigram { /*-- hamburger menu icon --*/
-  display: inherit;  /*-- default display is none --*/
+  display: none;  /*-- default display is none --*/
 }
 a#trigram::before { /*-- uses ::before to change the menu icon --*/
   content: '\2630'; /*-- sets it to show the hamburger icon --*/
@@ -53,7 +53,11 @@ a#trigram::before { /*-- uses ::before to change the menu icon --*/
   top: -.5rem; /*-- a little space from the top --*/
   right: 0; /*-- flush right --*/
 }
+
 @media screen and (max-width: 990px) {
+  a#trigram {
+    display: inherit;
+  }
   .nav-wrap {
     display: none;
 
