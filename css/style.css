@@ -18,11 +18,9 @@ a:active {color: var(--dkmid);}
 header.top-nav { /*-- main nav styles --*/
   background-color: var(--ltmid); /*-- nav background --*/
   padding: 1rem 2rem 1rem 0; /*-- inside padding --*/
-  display: flex; /*-- header bar is a flex container --*/
   min-height: 8rem; /*-- header bar has a minimum height --*/
-  justify-content: space-between; /*-- main axis space distribution --*/
-  align-items: center; /*-- cross axis space distribution --*/
-  position: relative; /*-- needed to absolutly position some children --*/
+  grid-template-areas: "title button" "nav nav";
+  display: grid;
 }
 nav { /*-- targets the links wrapper --*/
   flex-basis: 30%; /*-- gives this flex child an ideal width --*/
@@ -42,6 +40,7 @@ a.nav-link:hover {
 a.nav-link.logo {  /*-- just the site title --*/
   text-transform: uppercase; /*-- makes all caps --*/
   font-weight: 900; /*-- set to heaviest font --*/
+  grid-area: title;
 }
 a#trigram { /*-- hamburger menu icon --*/
   display: none;  /*-- default display is none --*/
@@ -52,6 +51,7 @@ a#trigram::before { /*-- uses ::before to change the menu icon --*/
   position: relative; /*-- posititions it explicitly --*/
   top: -.5rem; /*-- a little space from the top --*/
   right: 0; /*-- flush right --*/
+  text-align: center;
 }
 
 @media screen and (max-width: 990px) {
@@ -60,14 +60,11 @@ a#trigram::before { /*-- uses ::before to change the menu icon --*/
   }
   .nav-wrap {
     display: none;
-
+    grid-area: nav;
   }
   .nav-wrap.mobile {
     display:flex; 
     flex-direction: column;
-    position: absolute;
-    top: 0;
-    right: 0;
   }
 }
   
@@ -175,4 +172,7 @@ footer p { /*-- targets the footer text --*/
   width: 100%; /*-- p elements are full width of the container --*/
   text-align: center; /*-- centers the text --*/
   font-weight: 500; /*-- mid-weight font --*/
+}
+.tri-mobile::before {
+  content: "x" !important; 
 }
