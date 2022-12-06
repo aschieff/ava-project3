@@ -1,4 +1,4 @@
-// toggles the navigation menu
+// Put toggles and the navigation menu
 function navToggle() {
 let siteNav = document.getElementById('site-nav');
 let trigram = document.getElementById('trigram');

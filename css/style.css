@@ -1,8 +1,8 @@
 :root {/*-- sets color variables --*/
-  --dark: rgb(53, 61, 83);
-  --ltmid: #DDD;
-  --dkmid: rgb(71, 82, 112);
-  --light: #F9F9F9;
+  --dark: rgb(35, 39, 49);
+  --ltmid: rgb(129, 129, 129);
+  --dkmid: rgb(60, 67, 85);
+  --light: rgb(172, 172, 172);
   --accent: rgb(70, 108, 214);
 }
 body {
